@@ -138,9 +138,11 @@ body {
 .whole-container {
   width: 80%;
   margin: auto;
+  /*variable*/
 }
 @media (max-width: 500px) {
   .whole-container {
+    /*nested at media*/
     width: 100%;
     margin: auto;
   }
@@ -149,17 +151,18 @@ body {
   padding: 0% 2%;
 }
 .whole-container .first-section {
+  /*mixin*/
   display: flex;
   width: 100%;
   flex-flow: row wrap;
   padding: 10% 2%;
   font-size: 2rem;
   justify-content: space-between;
-  background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
   border-radius: 5%;
 }
 @media (max-width: 500px) {
   .whole-container .first-section {
+    /*mixin*/
     display: flex;
     flex-flow: column;
   }
@@ -167,6 +170,7 @@ body {
 .whole-container .pics {
   width: 49%;
   border: solid 1px black;
+  border-radius: 5%;
 }
 @media (max-width: 500px) {
   .whole-container .pics {
@@ -175,6 +179,7 @@ body {
   }
 }
 .whole-container .nav-flex {
+  /*mixin*/
   display: flex;
   width: 80%;
   justify-content: space-between;
@@ -218,4 +223,72 @@ body {
   .whole-container .occassion {
     display: none;
   }
+}
+.whole-container .second-section {
+  /*mixin*/
+  display: flex;
+  width: 99%;
+  flex-flow: row wrap;
+  margin: 5% auto;
+  justify-content: space-between;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+}
+.whole-container .second-section div {
+  width: 50%;
+  text-align: center;
+}
+.whole-container .second-section div h4 {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+.whole-container .second-section div ul {
+  font-size: 2rem;
+}
+@media (max-width: 500px) {
+  .whole-container .second-section {
+    /*mixin*/
+    display: flex;
+    flex-flow: column;
+  }
+  .whole-container .second-section div {
+    width: 100%;
+  }
+}
+.whole-container footer {
+  text-align: center;
+  margin-top: 0;
+  padding-top: 5%;
+  border-top: solid 1px grey;
+  font-size: 2rem;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+}
+.whole-container .table-dark {
+  margin-bottom: 0;
+}
+.whole-container caption {
+  text-align: center;
+  font-size: 1.9rem;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+}
+.whole-container p {
+  font-family: 'Darker Grotesque', sans-serif;
+}
+.whole-container li {
+  font-family: 'Darker Grotesque', sans-serif;
+}
+.whole-container h4,
+.whole-container h1,
+.whole-container td,
+.whole-container a {
+  font-family: 'Darker Grotesque', sans-serif;
+}
+.whole-container td {
+  font-size: 1.8rem;
+}
+.whole-container a {
+  color: black;
+  font-size: 1.5 rem;
 }

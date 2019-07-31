@@ -145,26 +145,30 @@ body {
   margin: auto;
 
   @media (max-width: 500px) {
+    /*nested at media*/
     width: 100%;
     margin: auto;
   }
 
   .flexit100() {
+    /*mixin*/
     display: flex;
     width: 100%;
     flex-flow: row wrap;
   }
   .flexit-column() {
+    /*mixin*/
     display: flex;
     flex-flow: column;
   }
 
   .flexittweak(@tweak-width: 100%) {
+    /*mixin*/
     display: flex;
     width: @tweak-width;
   }
 
-  @paragraph-padding: 0% 2%;
+  @paragraph-padding: 0% 2%; /*variable*/
 
   .jason-intro {
     padding: @paragraph-padding;
@@ -176,12 +180,12 @@ body {
     font-size: 2rem;
 
     justify-content: space-between;
-    background-image: linear-gradient(
-      to top,
-      #fdcbf1 0%,
-      #fdcbf1 1%,
-      #e6dee9 100%
-    );
+    // background-image: linear-gradient(
+    //   to top,
+    //   #fdcbf1 0%,
+    //   #fdcbf1 1%,
+    //   #e6dee9 100%
+    // );
     border-radius: 5%;
 
     @media (max-width: 500px) {
@@ -192,6 +196,7 @@ body {
   .pics {
     width: 49%;
     border: @black-border;
+    border-radius: 5%;
 
     @media (max-width: 500px) {
       width: 100%;
@@ -244,4 +249,74 @@ body {
       display: none;
     }
   }
-} //end whole-container div
+
+  .second-section {
+    .flexittweak(99%);
+    flex-flow: row wrap;
+    margin: 5% auto;
+    justify-content: space-between;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+
+    div {
+      width: 50%;
+      text-align: center;
+      h4 {
+        font-size: 2rem;
+        text-decoration: underline;
+      }
+      ul {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .flexit-column();
+      div {
+        width: 100%;
+      }
+    }
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 0;
+    padding-top: 5%;
+    border-top: solid 1px grey;
+    font-size: 2rem;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+  }
+
+  .table-dark {
+    margin-bottom: 0;
+  }
+  caption {
+    text-align: center;
+    font-size: 1.9rem;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+  }
+
+  p {
+    font-family: 'Darker Grotesque', sans-serif;
+  }
+  li {
+    font-family: 'Darker Grotesque', sans-serif;
+  }
+  h4,
+  h1,
+  td,
+  a {
+    font-family: 'Darker Grotesque', sans-serif;
+  }
+
+  td {
+    font-size: 1.8rem;
+  }
+  a {
+    color: black;
+    font-size: 1.5 rem;
+  }
+}
+//end whole-container div
