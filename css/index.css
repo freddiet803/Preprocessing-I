@@ -133,5 +133,89 @@ table {
 html,
 body {
   height: 100%;
-  background: red;
+  font-size: 62.5%;
+}
+.whole-container {
+  width: 80%;
+  margin: auto;
+}
+@media (max-width: 500px) {
+  .whole-container {
+    width: 100%;
+    margin: auto;
+  }
+}
+.whole-container .jason-intro {
+  padding: 0% 2%;
+}
+.whole-container .first-section {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  padding: 10% 2%;
+  font-size: 2rem;
+  justify-content: space-between;
+  background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+  border-radius: 5%;
+}
+@media (max-width: 500px) {
+  .whole-container .first-section {
+    display: flex;
+    flex-flow: column;
+  }
+}
+.whole-container .pics {
+  width: 49%;
+  border: solid 1px black;
+}
+@media (max-width: 500px) {
+  .whole-container .pics {
+    width: 100%;
+    border: solid 1px black;
+  }
+}
+.whole-container .nav-flex {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  padding: 0% 2%;
+  margin: 2% auto;
+}
+.whole-container .nav-flex a {
+  font-size: 1.5rem;
+}
+.whole-container .jason-title {
+  width: 100%;
+  margin-top: 2%;
+}
+@media (max-width: 500px) {
+  .whole-container .jason-title {
+    display: inline;
+  }
+}
+.whole-container .lines {
+  width: 100%;
+  border-bottom: solid 1px black;
+  margin: 0 auto;
+}
+.whole-container .button {
+  border: solid 1px black;
+  border-radius: 3%;
+  text-align: center;
+  padding: 2%;
+  margin-top: 5%;
+}
+@media (max-width: 500px) {
+  .whole-container .button {
+    width: 40%;
+    align-self: center;
+  }
+}
+.whole-container .occassion {
+  margin: 5% auto;
+}
+@media (max-width: 500px) {
+  .whole-container .occassion {
+    display: none;
+  }
 }

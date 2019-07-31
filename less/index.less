@@ -4,57 +4,244 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-	height: 100%;
-	background: red;
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
 }
 
+.whole-container {
+  width: 80%;
+  margin: auto;
+
+  @media (max-width: 500px) {
+    width: 100%;
+    margin: auto;
+  }
+
+  .flexit100() {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+  }
+  .flexit-column() {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .flexittweak(@tweak-width: 100%) {
+    display: flex;
+    width: @tweak-width;
+  }
+
+  @paragraph-padding: 0% 2%;
+
+  .jason-intro {
+    padding: @paragraph-padding;
+  }
+
+  .first-section {
+    .flexit100();
+    padding: 10% 2%;
+    font-size: 2rem;
+
+    justify-content: space-between;
+    background-image: linear-gradient(
+      to top,
+      #fdcbf1 0%,
+      #fdcbf1 1%,
+      #e6dee9 100%
+    );
+    border-radius: 5%;
+
+    @media (max-width: 500px) {
+      .flexit-column();
+    }
+  }
+  @black-border: solid 1px black;
+  .pics {
+    width: 49%;
+    border: @black-border;
+
+    @media (max-width: 500px) {
+      width: 100%;
+      border: @black-border;
+    }
+  }
+
+  .nav-flex {
+    .flexittweak(80%);
+    justify-content: space-between;
+    padding: @paragraph-padding;
+    margin: 2% auto;
+
+    a {
+      font-size: 1.5rem;
+    }
+  }
+
+  .jason-title {
+    width: 100%;
+    margin-top: 2%;
+    @media (max-width: 500px) {
+      display: inline;
+    }
+  }
+
+  .lines {
+    width: 100%;
+    border-bottom: @black-border;
+    margin: 0 auto;
+  }
+
+  .button {
+    border: @black-border;
+    border-radius: 3%;
+    text-align: center;
+    padding: 2%;
+    margin-top: 5%;
+
+    @media (max-width: 500px) {
+      width: 40%;
+      align-self: center;
+    }
+  }
+
+  .occassion {
+    margin: 5% auto;
+
+    @media (max-width: 500px) {
+      display: none;
+    }
+  }
+} //end whole-container div
